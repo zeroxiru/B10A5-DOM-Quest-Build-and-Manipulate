@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Donate Bangladesh</title>
+        <!-- font Google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- font lexend -->
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <!-- Link- TailwindCSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#B4F461',
+                            // secondary: '#030712',
+                            // couponOne: '#ffbf0f',
+                            // couponTwo: '#f78c9c',
+                            navbarColor: 'rgba(249, 247, 243, 1)',
+                            body: '#FFFFFF',
+                            buttonColor: '#B4F461',
+                            fontColor: 'rgba(17, 17, 17, 0.7)',
+                            historyColor: '#FFFFFF',
+                        },
+                        fontFamily: {
+                            Lexend: 'Lexend',
+    
+                        },
+                    }
+                },
+    
+    
+            }
+        </script>
+    </head>
+<body >
+    <header class="sticky top-0 backdrop-blur-lg bg-white/30 w-full z-50 mx-auto">
+        <section>
+            <div class="navbar bg-base-100 w-full bg-navbarColor lg:px-32 py-5">
+                <div class="navbar-start">
+                    <a id="btn-blog" class="btn bg-buttonColor text-xl text-black">Blog</a>
+                    <!-- Hamburger Icon -->
+                    <div class="block lg:hidden">
+                        <button id="hamburger" class="text-black focus:outline-none">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="navbar-center lg:flex hidden" id="nav-menu">
+                    <ul class="menu menu-horizontal px-1 flex items-center space-x-2">
+                        <div>
+                            <img src="assets/logo.png" alt="Logo">
+                        </div>
+                        <div>
+                            <li class="text-2xl font-bold">Donate Bangladesh</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <ul class="menu menu-horizontal px-1 flex items-center space-x-2">
+                        <div>
+                            <img src="assets/coin.png" alt="Coin Icon">
+                        </div>
+                        <div>
+                            <li id="totalAvailable-Bal" class="text-2xl font-bold text-fontColor">10000 BD</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </header> 
+        </section>
+        <div class="lg:px-32 mx-auto">
+            <div class="flex justify-center space-x-5 py-5">
+                <button id="show-donation" class="btn btn-primary bg-buttonColor text-black text-2xl font-bold">Donation</button>
+                <button id="show-history" class="btn btn-historyColor text-black text-2xl font-bold">History</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </header>
+
+
+<div>
+
+
+
+
+    <h2>IMPORTANT fAQ <span> <i class="fa-regular fa-comment"></i></span></h2>
+   
+</div>
+
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document OBject Model(DOM)?</div>
+        <div class="collapse-content">
+            <p>
+                The Document Object Model (DOM) is a programming interface for web documents. 
+                It represents the structure of a document (such as an HTML or XML file) as a tree 
+                of objects, where each object corresponds to a part of the document, like elements, 
+                attributes, and text.
+            </p>
+        
+            <h2>Key Points:</h2>
+            <ul>
+                <li><strong>Hierarchical Structure:</strong> The DOM organizes the document in a tree-like structure, 
+                    with each node representing an element, attribute, or piece of text.</li>
+                <li><strong>Dynamic Interaction:</strong> It allows scripts (often JavaScript) to access, manipulate, 
+                    and update the content, structure, and style of a document dynamically.</li>
+                <li><strong>Platform and Language Independent:</strong> The DOM can be used with various programming languages 
+                    and is not limited to a specific platform.</li>
+            </ul>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+            <ol>
+                <li><code>document.getElementById('id')</code>: Selects an element by its unique ID.</li>
+                <li><code>document.querySelector('selector')</code>: Selects the first element that matches a CSS selector.</li>
+                <li><code>document.querySelectorAll('selector')</code>: Selects all elements that match a CSS selector (returns a NodeList).</li>
+                <li><code>document.getElementsByClassName('class')</code>: Selects all elements with a specific class name.</li>
+                <li><code>document.getElementsByTagName('tag')</code>: Selects all elements with a specific tag name.</li>
+              </ol>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p>
+            Event delegation is an efficient way to handle events by attaching a single event listener to a parent element rather than adding 
+            listeners to individual child elements. This approach leverages the .target property of the event object to identify which specific child element triggered the event, allowing the parent to handle it appropriately.</p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+        <div class="collapse-content">
+          <p>To change an element's attributes and styles in JavaScript, first get the element using methods like getElementById or querySelector. 
+            Then, use setAttribute to change its attributes (e.g., change a link with element.setAttribute('href', 'new-link')). You can also modify its inline CSS by using the style property (e.g., element.style.color = 'orange' to change text color).</p>
+        </div>
+      </div>
+</body>
+</html>

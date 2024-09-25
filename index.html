@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <!-- font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Link- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        // secondary: '#030712',
+                        // couponOne: '#ffbf0f',
+                        // couponTwo: '#f78c9c',
+                        navbarColor: 'rgba(249, 247, 243, 1)',
+                        body: '#FFFFFF',
+                        buttonColor: '#B4F461',
+                        fontColor: 'rgba(17, 17, 17, 0.7)',
+                        historyColor: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend',
+
+                    },
+                }
+            },
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <header class="sticky top-0 backdrop-blur-lg bg-white/30 w-full z-50 mx-auto">
+        <section>
+            <div class="navbar bg-base-100 w-full bg-navbarColor lg:px-32 py-5">
+                <div class="navbar-start">
+                    <a id="btn-blog" class="btn bg-buttonColor text-xl text-black">Blog</a>
+                    <!-- Hamburger Icon -->
+                    <div class="block lg:hidden">
+                        <button id="hamburger" class="text-black focus:outline-none">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="navbar-center lg:flex hidden" id="nav-menu">
+                    <ul class="menu menu-horizontal px-1 flex items-center space-x-2">
+                        <div>
+                            <img src="assets/logo.png" alt="Logo">
+                        </div>
+                        <div>
+                            <li class="text-2xl font-bold">Donate Bangladesh</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <ul class="menu menu-horizontal px-1 flex items-center space-x-2">
+                        <div>
+                            <img src="assets/coin.png" alt="Coin Icon">
+                        </div>
+                        <div>
+                            <li id="totalAvailable-Bal" class="text-2xl font-bold text-fontColor">10000 BD</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        <div class="lg:px-32 mx-auto">
+            <div class="flex justify-center space-x-5 py-5">
+                <button id="show-donation" class="btn btn-primary bg-buttonColor text-black text-2xl font-bold">Donation</button>
+                <button id="show-history" class="btn btn-historyColor text-black text-2xl font-bold">History</button>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </header>
+    
+    <main class="w-9/12 mx-auto">
+
+        <section id="donation-sections" class="lg:px-32 lg:max-w-8/12 mx-auto">
+            <div class="card card-side bg-base-100 shadow-2xl flex flex-col lg:flex-row ">
+                <figure class=" w-full lg:w-1/2">
+                    <img class="lg:py-5 lg:px-5" src="assets/noakhali.png" alt="Noakhali" />
+                </figure>
+                <div class="card-body w-full lg:w-1/2">
+                    <div class="navbar-end">
+                        <ul class="menu menu-horizontal px-1 flex items-center space-x-1">
+                            <div>
+                                <img src="assets/coin.png">
+                            </div>
+                            <div>
+                                <button id="noakhaliAvailable-Bal" class=" btn text-lg font-bold text-fontColor">5500
+                                    BD</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <h2 id="header-DonationForFlood" class="card-title font-bold text-xl py-5">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <p class="fontColor text-left"> The recent floods in Noakhali have caused significant damage to
+                        homes infrastructure. Your donation will help provide essential supplies and to those affected
+                        by this disaster. Every contribution, big or small, makes difference. Please join us in
+                        supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                    <div class="card-actions justify-center w-full">
+                        <input id="da-Noakhali" type="text" placeholder="Donation Amount here"
+                            class="input input-bordered w-full max-w-lg" />
+                    </div>
+                    <div class="card-actions justify-center w-full">
+                        <button id="donate-now" onclick="my_modal_5.showModal()"
+                            class=" bg-buttonColor btn w-full max-w-lg">Donate Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <h2 class="text-3xl font-bold text-center">Congrates!</h2>
+                        <div class="flex justify-center">
+                            <img class="py-7" src="assets/coin.png">
+                        </div>
+
+                        <div class="flex justify-center">
+                            <p class="py-4 ">You have donated for Humankind <br><span
+                                    class="font-extrabold flex justify-center fon py-5 text-3xl">Successfully</span></p>
+                        </div>
+
+                        <!-- if there is a button in form, it will close the modal -->
+                        <div class="modal-action flex justify-center">
+                            <form method="dialog">
+                                <button class="btn">Close confirmation</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+        <!--   2nd section -->
+
+        <!-- 3rd Section -->
+       
+
+    </main>
+    <section >
+        <div id="history-section" class="hidden">
+            <h2 class=" text-3xl text-center">Transactions History</h2>
+        <div id="history-container" class="w-8/12 flex flex-col justify-center mx-auto">
+
+
+          </div>
+          
+        </div>
+    </section>
+
+    <footer></footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/features.js"></script>
+</body>
+
+</html>
