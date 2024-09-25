@@ -172,3 +172,25 @@ document.getElementById('show-history').addEventListener('click', function () {
 
 })
 
+
+const donationButton = document.getElementById('show-donation');
+const historyButton = document.getElementById('show-history');
+
+// Function to handle button clicks
+function handleButtonClick(clickedButton) {
+    // Reset the button classes
+    donationButton.classList.remove('bg-buttonColor');
+    historyButton.classList.remove('bg-buttonColor');
+    
+    // Add the bg-buttonColor class to the clicked button
+    clickedButton.classList.add('bg-buttonColor');
+}
+
+// Add click event listeners to the buttons
+donationButton.addEventListener('click', function() {
+    handleButtonClick(donationButton);
+});
+
+historyButton.addEventListener('click', function() {
+    handleButtonClick(historyButton);
+});
