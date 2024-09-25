@@ -45,7 +45,8 @@
         <section>
             <div class="navbar bg-base-100 w-full bg-navbarColor lg:px-32 py-5">
                 <div class="navbar-start">
-                    <a id="btn-blog" class="btn bg-buttonColor text-xl text-black">Blog</a>
+                    <!-- <a id="btn-blog-home" class="btn bg-buttonColor text-xl text-black hidden">Blog</a> -->
+                    <a href="./blog.html" class="btn bg-buttonColor text-xl text-black">Blog</a>
                     <!-- Hamburger Icon -->
                     <div class="block lg:hidden">
                         <button id="hamburger" class="text-black focus:outline-none">
@@ -87,9 +88,9 @@
         <div class="divider"></div>
     </header>
     
-    <main class="w-9/12 mx-auto">
-
-        <section id="donation-sections" class="lg:px-32 lg:max-w-8/12 mx-auto">
+    <main class="w-9/12 mx-auto" id="donation-sections">
+          <!--   1st section -->
+        <section  class="lg:px-32 lg:max-w-8/12 mx-auto">
             <div class="card card-side bg-base-100 shadow-2xl flex flex-col lg:flex-row ">
                 <figure class=" w-full lg:w-1/2">
                     <img class="lg:py-5 lg:px-5" src="assets/noakhali.png" alt="Noakhali" />
@@ -107,7 +108,7 @@
                         </ul>
                     </div>
                     <h2 id="header-DonationForFlood" class="card-title font-bold text-xl py-5">Donate for Flood at Noakhali, Bangladesh</h2>
-                    <p class="fontColor text-left"> The recent floods in Noakhali have caused significant damage to
+                    <p class="fontColor text-justify"> The recent floods in Noakhali have caused significant damage to
                         homes infrastructure. Your donation will help provide essential supplies and to those affected
                         by this disaster. Every contribution, big or small, makes difference. Please join us in
                         supporting the relief efforts and making a positive impact on the lives of those in need.</p>
@@ -116,7 +117,63 @@
                             class="input input-bordered w-full max-w-lg" />
                     </div>
                     <div class="card-actions justify-center w-full">
-                        <button id="donate-now" onclick="my_modal_5.showModal()"
+                        <button id="donate-now" onclick="my_modal_4.showModal()"
+                            class=" bg-buttonColor btn w-full max-w-lg">Donate Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+
+                <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <h2 class="text-3xl font-bold text-center">Congrates!</h2>
+                        <div class="flex justify-center">
+                            <img class="py-7" src="assets/coin.png">
+                        </div>
+
+                        <div class="flex justify-center">
+                            <p class="py-4 ">You have donated for Humankind <br><span
+                                    class="font-extrabold flex justify-center fon py-5 text-3xl">Successfully</span></p>
+                        </div>
+
+                        <!-- if there is a button in form, it will close the modal -->
+                        <div class="modal-action flex justify-center">
+                            <form method="dialog">
+                                <button class="btn">Close confirmation</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+        <!--   2nd section -->
+        <section  class="lg:px-32 lg:max-w-8/12 mx-auto py-5">
+            <div class="card card-side bg-base-100 shadow-2xl flex flex-col lg:flex-row ">
+                <figure class=" w-full lg:w-1/2">
+                    <img class="lg:py-5 lg:px-5" src="assets/feni.png" alt="feni" />
+                </figure>
+                <div class="card-body w-full lg:w-1/2">
+                    <div class="navbar-end">
+                        <ul class="menu menu-horizontal px-1 flex items-center space-x-1">
+                            <div>
+                                <img src="assets/coin.png">
+                            </div>
+                            <div>
+                                <button id="feni-Bal" class=" btn text-lg font-bold text-fontColor">5500
+                                    BD</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <h2 id="header-DonationForFloodFenni" class="card-title font-bold text-xl py-5">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <p class="fontColor text-justify">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <div class="card-actions justify-center w-full">
+                        <input id="da-feni" type="text" placeholder="Donation Amount here"
+                            class="input input-bordered w-full max-w-lg" />
+                    </div>
+                    <div class="card-actions justify-center w-full">
+                        <button id="donate-now-feni" onclick="my_modal_5.showModal()"
                             class=" bg-buttonColor btn w-full max-w-lg">Donate Now</button>
 
                     </div>
@@ -147,9 +204,67 @@
                 </dialog>
             </div>
         </section>
-        <!--   2nd section -->
 
         <!-- 3rd Section -->
+        <section  class="lg:px-32 lg:max-w-8/12 mx-auto py-5">
+            <div class="card card-side bg-base-100 shadow-2xl flex flex-col lg:flex-row ">
+                <figure class=" w-full lg:w-1/2">
+                    <img class="lg:py-5 lg:px-5" src="assets/quota-protest.png" alt="quota" />
+                </figure>
+                <div class="card-body w-full lg:w-1/2">
+                    <div class="navbar-end">
+                        <ul class="menu menu-horizontal px-1 flex items-center space-x-1">
+                            <div>
+                                <img src="assets/coin.png">
+                            </div>
+                            <div>
+                                <button id="quota-Bal" class=" btn text-lg font-bold text-fontColor">5500
+                                    BD</button>
+                            </div>
+                        </ul>
+                    </div>
+                    <h2 id="header-DonationForFloodQuota" class="card-title font-bold text-xl py-5">Aid for Injured in the Quota Movement</h2>
+                    <p class="fontColor text-justify">The recent Quota movement has resulted in numerous injuries and significant 
+                        hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary 
+                        supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time.
+                         Every donation plays a vital role in alleviating their suffering and aiding in their recovery. 
+                        Please consider making a donation to support these brave individuals in their time of need.</p>
+                    <div class="card-actions justify-center w-full">
+                        <input id="da-quota" type="text" placeholder="Donation Amount here" 
+                            class="input input-bordered w-full max-w-lg" />
+                    </div>
+                    <div class="card-actions justify-center w-full">
+                        <button id="donate-now-quota" onclick="my_modal_6.showModal()"
+                            class=" bg-buttonColor btn w-full max-w-lg">Donate Now</button>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+
+                <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <h2 class="text-3xl font-bold text-center">Congrates!</h2>
+                        <div class="flex justify-center">
+                            <img class="py-7" src="assets/coin.png">
+                        </div>
+
+                        <div class="flex justify-center">
+                            <p class="py-4 ">You have donated for Humankind <br><span
+                                    class="font-extrabold flex justify-center fon py-5 text-3xl">Successfully</span></p>
+                        </div>
+
+                        <!-- if there is a button in form, it will close the modal -->
+                        <div class="modal-action flex justify-center">
+                            <form method="dialog">
+                                <button class="btn">Close confirmation</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
        
 
     </main>

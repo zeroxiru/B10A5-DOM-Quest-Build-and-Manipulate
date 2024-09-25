@@ -18,11 +18,3 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
 
 }
-
-// const availableBalanceText = parseFloat(availableBalance.innerText);
-
-// const noakhaliAvailableBalance = document.getElementById('noakhaliAvailable-Bal');
-// const noakhaliAvailableBalanceText = parseFloat(noakhaliAvailableBalance.innerText);
-
-
-// console.log(availableBalanceText, noakhaliAvailableBalanceText);  //noakhaliAvailable-Bal
